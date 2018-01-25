@@ -1,3 +1,7 @@
+tekup_seance2:
+    resource: "@TekupSeance2Bundle/Resources/config/routing.yml"
+    prefix:   /
+
 tekup_first:
     resource: "@TekupFirstBundle/Resources/config/routing.yml"
     prefix:   /

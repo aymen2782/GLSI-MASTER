@@ -1,3 +1,15 @@
 tekup_first_homepage:
     path:     /
     defaults: { _controller: TekupFirstBundle:Default:index }
+
+tekup_second_homepage:
+    path:     /second
+    defaults: { _controller: TekupFirstBundle:Default:index }
+
+tekup_list_todo:
+    path:     /todo
+    defaults: { _controller: TekupFirstBundle:Todo:index }
+
+tekup_add_todo:
+    path:     /todo/add/{cle}/{valeur}
+    defaults: { _controller: TekupFirstBundle:Todo:add }

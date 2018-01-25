@@ -1,0 +1,35 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+{% for message in app.session.flashbag.get('success') %}
+<div class="alert alert-success">
+    {{ message }}
+</div>
+{% endfor %}
+
+{% for message in app.session.flashbag.get('error') %}
+    <div class="alert alert-danger">
+        {{ message }}
+    </div>
+{% endfor %}
+
+{% for message in app.session.flashbag.get('info') %}
+    <div class="alert alert-info">
+        {{ message }}
+    </div>
+{% endfor %}
+<h1>Liste des Todo</h1>
+Liste des Todo
+
+<ol class="list-group">
+{% for cle,valeur in app.session.get('mesTodos') %}
+    <li class="list-group-item">{{ cle }} : {{ valeur }}</li>
+{% endfor %}
+</ol>
+
+</body>
+
+</html>
+

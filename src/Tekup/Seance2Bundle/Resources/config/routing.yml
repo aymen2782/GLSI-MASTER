@@ -1,0 +1,3 @@
+tekup_seance2_homepage:
+    path:     /
+    defaults: { _controller: TekupSeance2Bundle:Default:index }
